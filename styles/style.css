@@ -54,7 +54,6 @@ ol {
 .content {
   display: grid;
   grid-template-columns: 1fr 399px;
-  /* justify-items: center; ??????????????????????????????????????????????????????????????????????????????????*/
   align-items: end;
   gap: 30px;
   margin: 133px 30px;
@@ -87,8 +86,8 @@ ol {
 
 .search-form__fieldset-title {
   margin-bottom: 5px;
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: inherit;
+  font-size: inherit;
 }
 
 .search-form__label {
@@ -121,12 +120,11 @@ ol {
   display: block;
   min-width: 225px;
   border: none;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   color: inherit;
   font-family: inherit;
   font-size: inherit;
-  font-weight: 400;
   line-height: 22px;
   background: transparent;
   appearance: none;
@@ -159,15 +157,10 @@ ol {
   height: 15px;
 }
 
-.search-form__label-text {
-  font-weight: 400;
-  font-size: 18px;
-}
-
 .button {
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   font-family: inherit;
-  font-size: 18px;
+  font-size: inherit;
   font-weight: 700;
   color: inherit;
   background: transparent;
@@ -207,7 +200,6 @@ ol {
 
 .title {
   font-family: "Oswald", sans-serif;
-  font-weight: 700;
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
@@ -220,8 +212,7 @@ ol {
 .content__list-container {
   position: relative;
   height: 298px;
-  overflow: scroll;
-  overflow-x: hidden;
+  overflow: auto;
 }
 
 .content__list {
@@ -255,6 +246,10 @@ ol {
   text-decoration: underline;
 }
 
+.content__card-link:active {
+  background-color: #545050;
+}
+
 .content__video-card {
   display: flex;
   align-items: start;
@@ -282,14 +277,12 @@ ol {
 
 .content__video-card-title {
   font-family: "Oswald", sans-serif;
-  font-weight: 700;
   font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
 }
 
 .content__video-card-description {
-  font-weight: 400;
   font-size: 17px;
   line-height: 90%;
   letter-spacing: 0.25px;
